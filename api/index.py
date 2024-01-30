@@ -17,6 +17,9 @@ class handler(BaseHTTPRequestHandler):
             capital = data["capital"][0]
             message = f"The capital of {dic['country']} is {capital}"
 
+        else:
+            message = "please provide a valid country"
+
         
         self.send_response(200)
         self.send_header('Content-type','text/plain')
