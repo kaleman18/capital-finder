@@ -14,7 +14,7 @@ class handler(BaseHTTPRequestHandler):
         if "country" in dic:
             response = requests.get(f"https://restcountries.com/v3.1/name/{dic['country']}?fullText=true")
             data = response.json()
-            capital = data["capital"][0]
+            capital = data[0]["capital"][0]
             message = f"The capital of {dic['country']} is {capital}"
 
         else:
