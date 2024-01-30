@@ -22,7 +22,6 @@ class handler(BaseHTTPRequestHandler):
             data = response.json()
             country = data[0]["name"]["common"]
             message = f"{dic['capital']} is the capital of {country}."
-    
 
         else:
             message = "please provide a valid country or capital"
